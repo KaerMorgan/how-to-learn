@@ -311,7 +311,7 @@ width равен 142.328px. Слава богу на вёрстку это не 
 
 .logo_place_footer {
   height: 35px;
-  background-image: url('../images/logo_place_footer.svg')
+  background-image: url('../images/logo_place_footer.svg');
 }
 
 .footer__author {
