@@ -12,6 +12,7 @@
   line-height: 1.5;
   font-weight: normal;
   padding: 0;
+  text-decoration: none;
 }/* Поскольку в брифе сказано: "В вашем макете не должно быть расстояний,
  унаследованных от браузера" и что убирать отступы нужно на уровне блока,
 я создал этот блок как нас учили в уроке про смешивание стилей в БЭМ.
@@ -335,7 +336,10 @@ width равен 142.328px. Слава богу на вёрстку это не 
 
 .footer__column-link {
   color: white;
+  color: -webkit-white;
+
   line-height: 30px;
+  text-decoration: none;
 }
 
 .footer__social-icon {
