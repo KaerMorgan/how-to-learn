@@ -5,20 +5,6 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-.main-text {
-  margin: 0;
-  color: #000;
-  font-size: 18px;
-  line-height: 1.5;
-  font-weight: normal;
-  padding: 0;
-  text-decoration: none;
-}/* Поскольку в брифе сказано: "В вашем макете не должно быть расстояний,
- унаследованных от браузера" и что убирать отступы нужно на уровне блока,
-я создал этот блок как нас учили в уроке про смешивание стилей в БЭМ.
-Мне не нравится такое решение и было бы здорово, если бы normalize.css
-не выделывался и обнулил margin за меня :( */
-
 .header {
   height: 100vh;
   min-height: 600px;
@@ -44,11 +30,14 @@
 }
 
 .header__title {
+  margin: 0 0 0 64px;
+  padding: 0;
+  text-decoration: none;
   width: 730px;
-  margin-left: 64px;
   line-height: 96px;
   font-size: 102px;
   font-weight: bold;
+  z-index: 99;
 }
 
 .header__subtitle {
@@ -58,6 +47,13 @@
   left: 64px;
   z-index: 99;
   line-height: 25px;
+
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-size: 18px;
+  font-weight: normal;
+  text-decoration: none;
 }
 
  .header__link {
@@ -102,24 +98,47 @@
   width: 175px;
   line-height: 1.2;
   color: #2f80ed;
+
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: normal;
+  text-decoration: none;
 }
 
 .two-columns__main-text {
   width: 80%;
   min-width: 784px;
+
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: normal;
+  text-decoration: none;
 }
 
 .two-columns__paragraph {
-  margin-bottom: 30px;
   line-height: 34px;
   font-size: 24px;
+
+  margin: 0 0 30px 0;
+  padding: 0;
+  color: #000;
   font-weight: normal;
+  text-decoration: none;
 }
 
-.span-accent {
+.two-columns__span-accent {
   line-height: 34px;
   font-size: 24px;
   font-weight: bold;
+
+  margin: 0;
+  padding: 0;
+  color: #000;
+  text-decoration: none;
 }
 
 .two-columns__paragraph:last-of-type {
@@ -132,21 +151,31 @@
   align-items: center;
 }
 
-.digits-title {
+.section-title {
   width: 60%;
-  margin-bottom: 20px;
   text-align: center;
   line-height: 1.15;
   font-size: 60px;
   font-weight: bold;
+
+  margin: 0 0 20px 0;
+  padding: 0;
+  color: #000;
+  text-decoration: none;
 }/* Я не очень понимаю почему, но размер .digits-title
 при width: 60% равен 930px */
 
-.digits-subtitle {
+.section-subtitle {
   width: 60%;
   text-align: center;
   line-height: 34px;
   font-size: 24px;
+
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-weight: normal;
+  text-decoration: none;
 }/* В то время как размер .digits-subtitle при том же значении
 width равен 142.328px. Слава богу на вёрстку это не влияет, но почему так всё равно не пойму. */
 
@@ -157,6 +186,8 @@ width равен 142.328px. Слава богу на вёрстку это не 
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 0;
+  z-index: 3;
 }
 
 .table__cell {
@@ -169,15 +200,26 @@ width равен 142.328px. Слава богу на вёрстку это не 
   line-height: 1.15;
   font-size: 24px;
   font-weight: bold;
+
+  margin: 0;
+  padding: 0;
+  color: #000;
+  text-decoration: none;
 }
 
 .table__text {
-  margin-top: 20px;
   line-height: 1.2;
+
+  margin: 20px 0 0;
+  padding: 0;
+  color: #000;
+  font-size: 18px;
+  font-weight: normal;
+  text-decoration: none;
 }
 
 .feynman {
-  height: 890px;
+  min-height: 890px;
   background-color: #f2f2f2;
   position: relative;
   display: flex;
@@ -188,19 +230,28 @@ width равен 142.328px. Слава богу на вёрстку это не 
 
 .feynman__title {
   width: 648px;
-  margin-top: 100px;
   text-align: center;
   z-index: 2;
   line-height: 1.15;
   font-size: 120px;
   font-weight: bold;
+
+  margin: 100px 0 0;
+  padding: 0;
+  color: #000;
+  text-decoration: none;
 }
 
 .feynman__subtitle {
-  margin-top: 70px;
   z-index: 2;
   line-height: 51px;
   font-size: 36px;
+
+  margin: 70px 0 0;
+  padding: 0;
+  color: #000;
+  font-weight: normal;
+  text-decoration: none;
 }
 
 .feynman__link {
@@ -212,7 +263,11 @@ width равен 142.328px. Слава богу на вёрстку это не 
   right: 48px;
   line-height: 51px;
   font-size: 36px;
-}/* Я второй раз пишу стили для ссылки, хотя мог написать общий для обеих класс и переиспользовать его, но тогда останутся пустыми стили у header__link, а в брифе сказано создать этот модификатор 🤔 */
+
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
 
 .feynman__image {
   width: 867px;
@@ -230,24 +285,31 @@ width равен 142.328px. Слава богу на вёрстку это не 
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  z-index: -2;
+  z-index: 1;
 }
 
-.kaufman-title_theme_dark {
+.section-title_theme_dark {
   color: white;
   width: 60%;
-  margin-top: 90px;
   text-align: center;
   line-height: 1.15;
   font-size: 60px;
   font-weight: bold;
+
+  margin: 90px 0 0;
+  padding: 0;
+  text-decoration: none;
 }
 
-.kaufman-subtitle_theme_dark{
+.section-subtitle_theme_dark{
   color: white;
-  margin-top: 20px;
   line-height: 34px;
   font-size: 24px;
+
+  margin: 20px 0 0;
+  padding: 0;
+  font-weight: normal;
+  text-decoration: none;
 }
 
 .table_theme_dark {
@@ -263,18 +325,33 @@ width равен 142.328px. Слава богу на вёрстку это не 
 
 .table__heading_theme_dark {
   color: white;
+
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: normal;
+  text-decoration: none;
 }
+
 .table__text_theme_dark {
   color: white;
-  margin-top: 20px;
+
+  margin: 20px 0 0;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: normal;
+  text-decoration: none;
 }
 
 .kaufman__triangle{
+  background-image: url(../images/kaufman-triangle.svg);
   width: 877px;
   height: 877px;
   position: absolute;
   right: -210px;
-  z-index: -1;
+  z-index: 2;
 }
 
 .footer {
@@ -300,14 +377,20 @@ width равен 142.328px. Слава богу на вёрстку это не 
   justify-content: space-between;
   flex-basis: 711px;
 }
-/*
-.footer__column_content_info {
 
+.footer__column_content_info {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin-bottom: 16px;
 }
 
 .footer__column_content_social {
-
-} эти стили даже не понадобились */
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin-bottom: 16px;
+}
 
 .logo_place_footer {
   height: 35px;
@@ -322,24 +405,39 @@ width равен 142.328px. Слава богу на вёрстку это не 
 
 .footer__column-heading {
   color: white;
-  margin-bottom: 20px;
   line-height: 30px;
   font-weight: bold;
+
+  margin: 20px 0 0;
+  padding: 0;
+  font-size: 18px;
+  text-decoration: none;
 }
 
 .footer__column-links {
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  margin-bottom: 16px;
+
+  margin: 0 0 16px;
+  padding: 0;
+  color: #000;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: normal;
+  text-decoration: none;
 }
 
 .footer__column-link {
   color: white;
   color: -webkit-white;
-
   line-height: 30px;
   text-decoration: none;
+
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: normal;
 }
 
 .footer__social-icon {
@@ -347,3 +445,17 @@ width равен 142.328px. Слава богу на вёрстку это не 
   height: 16px;
   margin-right: 10px;
 }
+
+.footer__column-item {
+  line-height: 30px;
+
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+/* В прошлом варианте кода все эти повторяющиеся стили для текстовых элементов были вынесены мной в класс main-text, но мне сказали что так нельзя и нужно сбрасывать предусмотренные браузером отступы на каждом элементе отдельно 🤷‍♂️ */
