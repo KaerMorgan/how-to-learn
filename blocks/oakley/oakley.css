@@ -4,8 +4,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0 auto -100px;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 auto;
   padding: 60px 0 0 0;
 }

@@ -3,7 +3,9 @@
   color: -webkit-white;
   line-height: 30px;
   text-decoration: none;
-
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
   margin: 0;
   padding: 0;
   font-size: 18px;
@@ -12,7 +14,4 @@
 
 .footer__column-link:hover {
   opacity: 0.5;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
 }

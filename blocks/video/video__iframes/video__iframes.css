@@ -4,7 +4,9 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: space-between;
   z-index: 99;
+  padding: 0;
+  list-style-type: none;
 }
